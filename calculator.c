@@ -84,10 +84,10 @@ int multiplication(int a , int b) {
     return a*b;
 }
 
-int division(int x, int y) {
-    return x / y;
+int division(int a, int b) {
+    return a / b;
 }
 
-int modulus(int x, int y) {
-    return x % y;
+int modulus(int a, int b) {
+    return a % b;
 }
