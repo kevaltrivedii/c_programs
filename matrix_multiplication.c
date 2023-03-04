@@ -1,37 +1,39 @@
-#include <stdio.h>
-
+#include<stdio.h>
 int main() {
-  int mat1[2][2], mat2[2][2], res[2][2];
-  int i, j;
+    int a[2][2], b[2][2], c[2][2];
+    int n, i, j, k;
 
+    printf("Enter the elements of Matrix-A: \n");
 
-  printf("Enter elements of matrix 1:\n");
-  for (i = 0; i < 2; i++) {
-    for (j = 0; j < 2; j++) {
-      scanf("%d", &mat1[i][j]);
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            scanf("%d", & a[i][j]);
+        }
     }
-  }
 
+    printf("Enter the elements of Matrix-B: \n");
 
-  printf("Enter elements of matrix 2:\n");
-  for (i = 0; i < 2; i++) {
-    for (j = 0; j < 2; j++) {
-      scanf("%d", &mat2[i][j]);
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            scanf("%d", & b[i][j]);
+        }
     }
-  }
 
-  res[0][0] = mat1[0][0] * mat2[0][0] + mat1[0][1] * mat2[1][0];
-  res[0][1] = mat1[0][0] * mat2[0][1] + mat1[0][1] * mat2[1][1];
-  res[1][0] = mat1[1][0] * mat2[0][0] + mat1[1][1] * mat2[1][0];
-  res[1][1] = mat1[1][0] * mat2[0][1] + mat1[1][1] * mat2[1][1];
-
-  printf("Result of multiplication:\n");
-  for (i = 0; i < 2; i++) {
-    for (j = 0; j < 2; j++) {
-      printf("%d ", res[i][j]);
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            c[i][j] = 0;
+            for (k = 0; k < 2; k++) {
+                c[i][j] += a[i][k] * b[k][j];
+            }
+        }
     }
-    printf("\n");
-  }
 
-  return 0;
+    printf("The product of the two matrices is: \n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            printf("%d\t", c[i][j]);
+        }
+        printf("\n");
+    }
+
 }
