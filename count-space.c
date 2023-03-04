@@ -8,6 +8,8 @@ int main() {
     int vowels = 0;
     int consonants = 0;
     int digits = 0;
+    int even=0;
+    int odd=0;
 
     printf("Enter a string: ");
     gets(str);
@@ -15,9 +17,15 @@ int main() {
     for (int i = 0; str[i]; i++) {
         if (isspace(str[i])) {
             whitespaces++;
-        } else if (isdigit(str[i])) {
+        } else if(isdigit(str[i])){
             digits++;
-        } else if (isalpha(str[i])) {
+            if((str[i]-'0')%2==0){
+             even++;       
+            }else{
+                odd++;
+            }
+        } 
+         else if (isalpha(str[i])) {
             characters++;
             char c = tolower(str[i]);
             if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
@@ -35,6 +43,8 @@ int main() {
     printf("Vowels in string: %d\n", vowels);
     printf("Consonants string: %d\n", consonants);
     printf("Digits in string: %d\n", digits);
+    printf("Number of even numbers: %d\n", even);
+    printf("Number of odd numbers: %d\n", odd);
     return 0;
 }
 
