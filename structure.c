@@ -41,12 +41,13 @@ int main(){
     
     printf("\n\n------------------DISPLAY-------------------\n\n");
     for(i=0; i<3; i++){
+        printf("\n----------------------------------------------\n");
         printf("Student %d details: \n",i+1);
-        printf("Roll no. : %d\n",s1[i].rollNo);
-        printf("Name : %s\n",s1[i].name);
-        printf("Age : %d\n",s1[i].age);
-        printf("Science marks : %0.2f\n",s1[i].science);
-        printf("Maths marks : %f0.2\n",s1[i].maths);
-        printf("English marks: %f0.2\n",s1[i].english);
+        printf("Roll no.: %d\n",s1[i].rollNo);
+        printf("Name: %s\n",s1[i].name);
+        printf("Age: %d\n",s1[i].age);
+        printf("Science marks: %0.2f\n",s1[i].science);
+        printf("Maths marks: %0.2f\n",s1[i].maths);
+        printf("English marks: %0.2f\n",s1[i].english);
     }
 }
